@@ -34,7 +34,7 @@
     "lint": "eslint . --fix",
     "lint:ci": "remark . && eslint .",
     "lint-fix-quiet": "eslint --fix --quiet",
-    "build": "yarn lint && rollup -c && yarn test:build",
+    "build": "rollup -c",
     "build:ci": "rollup -c && yarn test:build",
     "build:web": "yarn lint && rollup -c rollup.config.web.js && yarn test:build:web",
     "build:esm": "yarn lint && rollup -c rollup.config.esm.js && yarn test:build:esm",
@@ -117,6 +117,8 @@
   "dependencies": {
     "@babel/runtime-corejs2": "^7.2.0",
     "@postlight/ci-failed-test-reporter": "^1.0",
+    "@postlight/mercury-parser": "^2.2.0",
+    "express": "^4.18.2",
     "browser-request": "github:postlight/browser-request#feat-add-headers-to-response",
     "cheerio": "^0.22.0",
     "difflib": "github:postlight/difflib.js",
